@@ -9,26 +9,26 @@ export default {
   },
   argTypes: {
     children: { type: 'string' },
-    light: { type: 'boolean' },
   },
   parameters: {
     backgrounds: {
-      default: 'dark',
+      default: 'light',
     },
   },
 };
 
 export const Light = (args) => <Heading {...args} />;
-export const Dark = (args) => <Heading {...args} light={true} />;
+export const Dark = (args) => <Heading {...args} />;
 
 Light.parameters = {
   backgrounds: {
+    children: 'o texto esta escuro',
     default: 'light',
   },
 };
-Light.args = {
+Dark.args = {
   children: 'O texto está claro',
-  light: false,
+  colorDark: false,
 }
 
 

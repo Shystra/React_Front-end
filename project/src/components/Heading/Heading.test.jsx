@@ -16,7 +16,7 @@ describe('<Heading />', () => {
             'text-transform': 'none',
         });        
     });
-    it('shloud rende with white color', () => {
+    it('shloud render with white color', () => {
         const { debug } = renderTheme(<Heading corlorDark={false}>texto</Heading>);
         const heading = screen.getByRole('heading', { name: 'texto' });
         

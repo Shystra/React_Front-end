@@ -16,7 +16,7 @@ describe('<Heading />', () => {
             'text-transform': 'none',
         });        
     });
-    it('shloud render with white color', () => {
+    it('should render with white color', () => {
         const { debug } = renderTheme(<Heading corlorDark={false}>texto</Heading>);
         const heading = screen.getByRole('heading', { name: 'texto' });
         
@@ -25,7 +25,12 @@ describe('<Heading />', () => {
             color: theme.colors.white,
         })      
     });
-
-
-
+    it('should render correct heading sizes', () => {
+        const { debug } = renderTheme(<Heading size='small'>texto</Heading>);
+        const heading = screen.getByRole('heading', { name: 'texto'});
+          
+        expect(heading).toHaveStyle({
+            'font-size': theme.font.sizes.medium,
+        });
+    });
 });

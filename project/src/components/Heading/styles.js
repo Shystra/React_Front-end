@@ -9,18 +9,21 @@ const titleSize = {
   medium: (theme) => css`
     font-size: ${theme.font.sizes.large};`,
 
+  
+
   huge: (theme) => css`
-    font-size: ${theme.font.sizes.xlarge};
-    ${mediaFont(theme)};
+    font-size: ${theme.font.sizes.xhuge};
+    
   `,
 
   big: (theme) => css`
-    font-size: ${theme.font.sizes.xhude};`,
+    font-size: ${theme.font.sizes.xhuge};
+    ${mediaFont(theme)};`,
 };
 
 const mediaFont = (theme) => css`
   @media ${theme.media.lteMedium} {
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.xhuge};
     background: purple;
     
   }

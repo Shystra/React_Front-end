@@ -7,7 +7,12 @@ import { theme } from "../styles/theme";
 describe('<Heading />', () => {
     it('should render with default values', () => {
         const { debug } = renderTheme(<Heading>texto</Heading>);
+        const heading = screen.getByRole('heading', { name: 'texto' });
         debug();
+
+        expect(heading).toHaveStyle({
+            'color': theme.colors.primaryColor,
+        })
         
         });
     });

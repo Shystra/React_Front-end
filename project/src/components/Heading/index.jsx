@@ -11,7 +11,7 @@ export const Heading = ({
 }) => {
    
   return <Styled.Title 
-    corlorDark={corlorDark} 
+    colorDark={corlorDark} 
       as={as} 
         size={size}
           uppercase={uppercase}

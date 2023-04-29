@@ -12,18 +12,18 @@ const titleSize = {
   
 
   huge: (theme) => css`
-    font-size: ${theme.font.sizes.huge};
-    
+    font-size: ${theme.font.sizes.xhuge};
+    ${mediaFont(theme)};
   `,
 
   big: (theme) => css`
     font-size: ${theme.font.sizes.xlarge};
-    ${mediaFont(theme)};`,
+    `,
 };
 
 const mediaFont = (theme) => css`
   @media ${theme.media.lteMedium} {
-    font-size: ${theme.font.sizes.huge};
+    font-size: ${theme.font.sizes.xlarge};
     background: purple;
     
   }

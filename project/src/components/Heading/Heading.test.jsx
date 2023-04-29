@@ -13,7 +13,19 @@ describe('<Heading />', () => {
         expect(heading).toHaveStyle({
             'color': theme.colors.primaryColor,
             'font-size': theme.font.sizes.xhuge,
-            'text-transform': 'none'
+            'text-transform': 'none',
         });        
     });
+    it('shloud rende with white color', () => {
+        const { debug } = renderTheme(<Heading corlorDark={false}>texto</Heading>);
+        const heading = screen.getByRole('heading', { name: 'texto' });
+        
+
+        expect(heading).toHaveStyle({
+            color: theme.colors.white,
+        })      
+    });
+
+
+
 });

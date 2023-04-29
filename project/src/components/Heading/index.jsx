@@ -5,7 +5,7 @@ export const Heading = ({
   children, 
   corlorDark = true, 
   as = 'h1', 
-  size = 'big',
+  size = 'huge',
   uppercase = false,
 
 }) => {
@@ -23,8 +23,8 @@ export const Heading = ({
 
 Heading.propTypes = {
   children: P.node.isRequired,
-  corlorDark: P.bool.isRequired,
-  as: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
-  size: P.oneOf(['small', 'medium', 'huge', 'big']).isRequired,
-  uppercase: P.bool.isRequired,
+  corlorDark: P.bool,
+  as: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  size: P.oneOf(['small', 'medium', 'huge', 'big']),
+  uppercase: P.bool,
 };

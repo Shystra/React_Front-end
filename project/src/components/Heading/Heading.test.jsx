@@ -12,7 +12,7 @@ describe('<Heading />', () => {
 
         expect(heading).toHaveStyle({
             'color': theme.colors.primaryColor,
-            'font-size': theme.font.sizes.xhuge,
+            'font-size': theme.font.sizes.huge,
             'text-transform': 'none',
         });        
     });
@@ -33,4 +33,23 @@ describe('<Heading />', () => {
             'font-size': theme.font.sizes.medium,
         });
     });
+
+    it('should render correct heading sizes in big', () => {
+        const { debug } = renderTheme(<Heading size='big'>texto</Heading>);
+        const heading = screen.getByRole('heading', { name: 'texto'});
+          
+        expect(heading).toHaveStyle({
+            'font-size': theme.font.sizes.xlarge,
+        });
+    });
+    it ('should render correct heading sizes in huge', () => {
+        const { debug } = renderTheme(<Heading size='huge'>children</Heading>);
+        const heading = screen.getByRole('heading', { name:'children' });
+
+        expect(heading).toHaveStyle({
+            'font-size': theme.font.sizes.huge,
+        });
+    });
+
+
 });

@@ -5,9 +5,9 @@ export default {
     title: 'SectionBackground',
     component: SectionBackground,
     args: {children:(
-        <SectionContainer>
+        
             <div>
-                <h1>SectionContainer</h1>
+                <h1>SectionBackground</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Reiciendis amet minus quas ducimus vel a
@@ -16,7 +16,7 @@ export default {
                     odio in atque.
                 </p>
             </div>
-        </SectionContainer>
+        
     )},
     argTypes: {
         children: {type: ''},

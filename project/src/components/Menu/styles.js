@@ -8,7 +8,20 @@ export const Container = styled.div`
         left: 0;
         right: 0;
         bottom: 0;
-                       
+        border-bottom: ${theme.colors.mediumGray}; 
+    
+    `}
+`;
+
+export const MenuContainer = styled.div`
+    ${({ theme }) => css`
+     
+    
+    `}
+`;
+export const Button = styled.button`
+    ${({ theme }) => css`
+        
     
     `}
 `;

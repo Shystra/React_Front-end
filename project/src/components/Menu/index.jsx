@@ -1,14 +1,23 @@
 import P from 'prop-types';
 import * as Styled from './styles';
+import { SectionContainer } from '../SectionContainer';
+import { LogoLink } from '../LogoLink';
+import { NavLinks } from '../NavLinks';
 
-export const Menu = ({ children }) => {
+export const Menu = ({ links = [], logoData }) => {
     return (
         <Styled.Container>
-            <h1>{children}</h1>
+            <SectionContainer>
+                <Styled.MenuContainer>
+                    <LogoLink {...logoData}/>
+                    <NavLinks links={links} />
+                </Styled.MenuContainer>
+            </SectionContainer>
         </Styled.Container>
     );
 };
 
 Menu.propTypes = {
-    children: P.node.isRequired,
+    ...NavLinks.propTypes,  //Expadir links
+    logoData: P.shape(LogoLink.propTypes).isRequired // Cria uma nova chave dentro do logoData
 };

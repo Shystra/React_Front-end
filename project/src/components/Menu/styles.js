@@ -1,4 +1,6 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Container as SectionContainer } from '../SectionContainer/styles';
+import { Title as Heading } from '../Heading/styles';
 
 export const Container = styled.div`
     ${({ theme }) => css`
@@ -8,8 +10,14 @@ export const Container = styled.div`
         left: 0;
         right: 0;
         bottom: 0;
-        border-bottom: ${theme.colors.mediumGray}; 
-    
+        border-bottom: ${theme.colors.mediumGray};
+        background: ${theme.colors.white};
+
+        
+      > ${SectionContainer} {
+            padding-top: 0;
+            padding-bottom: 0;
+        } 
     `}
 `;
 
@@ -22,9 +30,39 @@ export const MenuContainer = styled.div`
         @media ${theme.media.lteMedium} {
             display: block;
             text-align: center;
-            /* padding: ${theme.spacings.xxlarge}; */
+            padding: ${theme.spacings.xxlarge} 0;
+            overflow-y: auto;
         }
     
+
+
+        & ${Heading} {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+
+        // Quando a tela for menor que 768px (mobile)
+        @media ${theme.media.lteMedium} {
+            height: 100vh;
+
+            > ${SectionContainer} {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                height: 100vh;
+                align-items: center;
+                overflow-y: auto;
+
+            }
+
+            & ${Heading} {
+                padding-bottom: ${theme.spacings.large};
+                display: flex;
+                justify-content: center
+            }
+        }
+
     `}
 `;
 export const Button = styled.button`

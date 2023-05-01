@@ -15,7 +15,15 @@ export const Container = styled.div`
 
 export const MenuContainer = styled.div`
     ${({ theme }) => css`
-     
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media ${theme.media.lteMedium} {
+            display: block;
+            text-align: center;
+            /* padding: ${theme.spacings.xxlarge}; */
+        }
     
     `}
 `;

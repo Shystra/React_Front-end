@@ -1,5 +1,7 @@
 import { Heading } from '../../components/Heading';
 import * as Styled from './styles';
+import React from 'react'
+
 
 
 

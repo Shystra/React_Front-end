@@ -3,14 +3,14 @@ import * as Styled from './styles';
 import { SectionContainer } from '../SectionContainer';
 import { LogoLink } from '../LogoLink';
 import { NavLinks } from '../NavLinks';
-import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
-import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
+import { Menu as MenuIcon} from '@styled-icons/boxicons-regular/Menu';
+import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
 import { useState } from 'react';
 
 
 export const Menu = ({ links = [], logoData }) => {
     const [visible, setVisible] = useState(false);
-
+    
     return (
         <>
         <Styled.Button 
@@ -18,7 +18,7 @@ export const Menu = ({ links = [], logoData }) => {
         onClick={() => setVisible(true)} 
         aria-label='Open/Close menu'
         >
-        {visible ? (<CloseIcon aria-label='Close menu'/>) : (<MenuIcon aria-label='Open menu'/>)}
+        {visible ? (<CloseOutline aria-label='Close menu'/>) : (<MenuIcon aria-label='Open menu'/>)}
         </Styled.Button>
         <Styled.Container visible={visible} onClick={() => setVisible(false)} >
           <SectionContainer>

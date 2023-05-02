@@ -1,10 +1,19 @@
 import { screen } from '@testing-library/react';
 import { Menu } from '.'
 import { renderTheme } from '../styles/render_theme';
+import linksMock from '../NavLinks/mock';
+
+const logoData = { 
+    text: 'Logo',
+    link: '#target',
+};
+
 
 describe('<Menu />', () => {
-    it('should render', () => {
-        renderTheme(<Menu>Children</Menu>);
-        expect(screen.getByRole('heading')).toBeInTheDocument();
+    it('should render Logo and Main Menu Nav', () => {
+        const {contianer} = renderTheme(<Menu links={linksMock} logoData={logoData}/>);
+
+        expect(screen.getByRole('heading', { name: 'Logo' })).toBeInTheDocument();
+        experct(screen.getByRole('navigation', { name: 'Main menu' })).toBeInTheDocument();
     });
 });

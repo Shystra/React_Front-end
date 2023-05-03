@@ -14,6 +14,10 @@ describe('<Menu />', () => {
         const {contianer} = renderTheme(<Menu links={linksMock} logoData={logoData}/>);
 
         expect(screen.getByRole('heading', { name: 'Logo' })).toBeInTheDocument();
-        experct(screen.getByRole('navigation', { name: 'Main menu' })).toBeInTheDocument();
+        expect(screen.getByRole('navigation', { name: 'Main menu' })).toBeInTheDocument();
+
+        expect (contianer).toMatchSnapshot();
+
+
     });
 });

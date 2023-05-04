@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { Container as SectionContainer } from '../SectionContainer/styles';
-import {Menu as MenuIcon} from '@styled-icons/entypo/Menu';
 import { Title as Heading } from '../Heading/styles';
 
 const menuVisible = (theme) => css`

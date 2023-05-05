@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import styled, { ThemeProvider, css } from 'styled-components';
 import ReactDOM from 'react-dom/client';
 import Home from './components/App';

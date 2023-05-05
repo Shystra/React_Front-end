@@ -13,6 +13,8 @@ export const Container = styled.div`
     }
     ${Title} {
       margin-bottom: ${theme.spacings.xlarge};
+      
+      
     }
   `}
 `;
@@ -27,9 +29,6 @@ export const TextContainer = styled.div`
 export const ImageContainer = styled.div`
     ${({ theme }) => css`
     
-    
-    
-    
     `}
 
 `;
@@ -37,5 +36,9 @@ export const ImageContainer = styled.div`
 export const Image = styled.img`
     ${({ theme }) => css`
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+    transition: transform 100ms ease-in-out;
+    
     `}
 `;

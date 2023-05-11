@@ -1,5 +1,5 @@
 import Home from '.';
-import { renderTheme } from '../styles/render_theme';
+import {renderTheme} from '../../styles/render_theme';
 
 
 describe('<Home />', () => {

@@ -1,4 +1,4 @@
-import linksMock from '../components/NavLinks/mock';
+import linksMock from '../../components/NavLinks/mock';
 
 
 

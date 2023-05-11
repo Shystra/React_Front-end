@@ -14,7 +14,7 @@ export const mockBase = {
           <GridText {...gridMock} background />
         </>
       ),
-      ...mock,
+    ...mock,
 }
 
 export default {

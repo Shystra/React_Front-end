@@ -7,6 +7,7 @@ export const mapSections = (sections = []) => {
             return mapSectionContent(section);
         }
         if (section.__component === 'section.section-grid') {
+            
             return mapSectionGrid(section);
         }
 
@@ -33,8 +34,21 @@ export const mapSectionTwoColumns = (section = {}) => {
     };
 };
 
-export const mapSectionContent = (section) => {
-    return section;
+export const mapSectionContent = (section = {}) => {
+    const {
+        __component: component = '',
+            title = '',
+                content: html = '',
+            metadata: { background = false, section_id: sectionId = '' } = false,
+    } = section;
+
+    return {
+        component,
+            title,
+                background,
+            sectionId,
+        html,
+    };
 };
 
 export const mapSectionGrid = (section) => {

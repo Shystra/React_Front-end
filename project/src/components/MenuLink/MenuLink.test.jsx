@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
-import { MenuLink } from '.'
-import { renderTheme } from '../styles/render_theme' ;
+import { MenuLink } from '.';
+import { renderTheme } from '../../styles/render_theme' ;
 
 
 describe('<MenuLink />', () => {

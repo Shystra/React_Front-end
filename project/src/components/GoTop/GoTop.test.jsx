@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
-import { GoTop } from '.'
-import { renderTheme } from '../styles/render_theme';
+import { GoTop } from '.';
+import { renderTheme } from '../../styles/render_theme';
 
 describe('<GoTop />', () => {
     it('should render a got to top button', () => {

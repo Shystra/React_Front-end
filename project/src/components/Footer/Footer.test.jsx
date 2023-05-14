@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
-import { Footer } from '.'
-import { renderTheme } from '../styles/render_theme';
+import { Footer } from '.';
+import { renderTheme } from '../../styles/render_theme';
 
 describe('<Footer />', () => {
     it('should render', () => {

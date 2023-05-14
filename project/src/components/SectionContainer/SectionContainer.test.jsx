@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import { SectionContainer } from '.'
-import { renderTheme } from '../styles/render_theme';
+import { renderTheme } from '../../styles/render_theme';
 
 describe('<SectionContainer />', () => {
     it('should render content', () => {

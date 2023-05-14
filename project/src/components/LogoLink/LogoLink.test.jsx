@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
-import { LogoLink } from '.'
-import { renderTheme } from '../styles/render_theme';
+import { LogoLink } from '.';
+import { renderTheme } from '../../styles/render_theme';
 
 describe('<LogoLink />', () => {
     it('should render text logo', () => {

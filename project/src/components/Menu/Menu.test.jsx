@@ -1,9 +1,9 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { Menu } from '.'
-import { renderTheme } from '../styles/render_theme';
+import { Menu } from '.';
+import { renderTheme } from '../../styles/render_theme';
 import linksMock from '../NavLinks/mock';
-import { theme } from '../styles/theme';
-import { Container } from './styles';
+import { theme } from '../../styles/theme';
+
 
 const logoData = { 
     text: 'Logo',

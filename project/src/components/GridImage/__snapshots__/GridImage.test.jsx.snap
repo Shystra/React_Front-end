@@ -76,6 +76,7 @@ exports[`<GridImage /> should render with background 1`] = `
           class="c3"
         >
           My grid
+           
         </h2>
         <p
           class="c4 c5"
@@ -222,6 +223,7 @@ exports[`<GridImage /> should render without background 1`] = `
           class="c3"
         >
           My grid
+           
         </h2>
         <p
           class="c4 c5"

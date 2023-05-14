@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
-import { GridText } from '.'
-import { renderTheme } from '../styles/render_theme';
+import { GridText } from '.';
+import { renderTheme } from '../../styles/render_theme';
 import mock from './mock';
 
 describe('<GridText />', () => {
